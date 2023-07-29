@@ -18,8 +18,7 @@ const sumAll = function(a,b) {
     d = b;
   }
   for (let i = c; i < d+1; i++) {
-    newArray.push(i)
-    console.log(newArray)
+    newArray.push(i);
   }
   for (let j = 0; j < newArray.length ; j++) {
     sumAll += newArray[j];
@@ -27,6 +26,6 @@ const sumAll = function(a,b) {
   return sumAll
 };
 
-sumAll(1, 4);
+sumAll(10, [90, 1]);
 
 module.exports = sumAll;

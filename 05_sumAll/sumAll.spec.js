@@ -1,4 +1,4 @@
-const sumAll = require('./sumAll-solution');
+const sumAll = require('./sumAll');
 
 describe('sumAll', () => {
   test('sums numbers within the range', () => {
