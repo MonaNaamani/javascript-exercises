@@ -1,8 +1,8 @@
 const sumAll = function(a,b) {
   let sumAll = 0;
   let newArray = [];
-  let c = 0;
-  let d = 0;
+  let min = 0;
+  let max = 0;
   
   if ( a < 0 || b < 0) {
     return "ERROR"
@@ -10,14 +10,18 @@ const sumAll = function(a,b) {
     return "ERROR"
   } else if(Array.isArray(a) === true || Array.isArray(b) === true ) {
     return "ERROR"
-  } else if (a>b) {
-    c = b;
-    d = a;
-  } else if (a<b) {
-    c = a;
-    d = b;
+  } else if(!Number.isInteger(a) || !Number.isInteger(b)) {
+    return "ERROR"
   }
-  for (let i = c; i < d+1; i++) {
+
+  if (a>b) {
+    min = b;
+    max = a;
+  } else if (a<b) {
+    min = a;
+    max = b;
+  }
+  for (let i = min; i < max+1; i++) {
     newArray.push(i);
   }
   for (let j = 0; j < newArray.length ; j++) {
